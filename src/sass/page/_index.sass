@@ -1,0 +1,478 @@
+.intro
+    overflow: hidden
+    &-list 
+        position: relative
+        .flickity-page-dots
+            position: absolute
+            top: 50%
+            right: 5vw
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            transform: translateY(-50%)
+            @media screen and (max-width: 767px)
+                flex-direction: row
+                top: 90%
+                left: 50%
+                justify-content: center
+                transform: translateX(-50%)
+            .dot
+                display: inline-block
+                width: 8px
+                height: 8px
+                border: 1px solid #ffffff
+                border-radius: 50%
+                margin-bottom: 15px
+                @media screen and (max-width: 767px)
+                    margin-bottom: 0
+                    margin-right: 15px
+                &.last-child
+                    margin-bottom: 0
+                    @media screen and (max-width: 767px)
+                        margin-right: 0
+                &:hover
+                    cursor: pointer
+                &.is-selected
+                    background: #ffffff
+        &__item
+
+.intro-item
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    overflow: hidden
+    box-sizing: border-box
+    padding-bottom: 5vh
+    @media screen and (max-width: 767px)
+        padding-bottom: 20vh
+    &__bg
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        object-fit: cover
+        z-index: -1
+    &__title
+        +rfs(62px)
+        font-weight: 300
+        text-align: center
+        color: rgb(255, 255, 255)
+        margin-bottom: 20px
+        span 
+            font-weight: bold
+    &__text
+        +rfs(48px)
+        color: rgba(255, 255, 255, 0.9)
+        text-align: center
+        font-weight: 300
+        margin-bottom: 22px
+        span
+            color: rgb(15, 235, 158)
+    &__small
+        +rfs(18px)
+        font-weight: 300
+        color: rgba(255, 255, 255, 0.9)
+        position: relative
+        margin-bottom: 30px
+        &:after,
+        &:before
+            position: absolute
+            content: ''
+            width: 28px
+            height: 1px
+            top: 50%
+            transform: translateY(-50%)
+            background-color: rgb(15, 235, 158)
+        &:after
+            left: 110%
+        &:before
+            right: 110%
+    &__social
+
+.intro-social
+    display: flex
+    align-items: center
+    &__item
+        margin-right: 15px
+        &:last-child
+            margin-right: 0px
+        a
+            display: block
+            img                
+
+.features
+    background-color: rgb(244, 247, 249)
+    padding: 77px 0 142px
+    &-body 
+        &__title
+            span 
+                margin-bottom: 67px
+        &__items
+.features-items
+    display: flex
+    justify-content: space-between
+    position: relative
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -80px
+        left: 50%
+        transform: translateY(-50%)
+        .dot
+            display: inline-block
+            width: 8px
+            height: 8px
+            border: 1px solid rgba(6, 32, 51, 0.2)
+            border-radius: 50%
+            margin-right: 15px
+            &.last-child
+                margin-right: 0
+            &:hover
+                cursor: pointer
+            &.is-selected
+                background-color: rgb(6, 32, 51)
+    &__feat
+        width: 30%
+
+.features-feat
+    box-sizing: border-box
+    padding-left: 60px
+    position: relative
+    &__logo
+        position: absolute
+        left: 0
+        top: 0
+    &__title
+        +rfs(20)
+        font-weight: 400
+        color: rgb(6, 32, 51)
+        margin-bottom: 22px
+    &__text
+        +rfs(13px)
+        font-weight: 400
+        color: rgba(6, 32, 51,0.7)
+        line-height: 21px
+
+.works
+    padding-top: 99px 
+    &-body 
+        &__title
+             span 
+                margin-bottom: 36px
+        &__text
+            margin-bottom: 48px
+        &__gallery
+.works-gallery
+    &__nav
+        margin-bottom: 37px
+    &__grid
+.works-nav
+    display: flex
+    justify-content: center
+    align-items: center
+    &__button
+        border: none
+        background: none
+        +rfs(14px)
+        font-weight: 700 
+        text-align: center
+        color: rgb(6, 32, 51)
+        margin-right: 15px
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &.active 
+            background-color: rgb(14, 180, 147)
+            color: rgb(255, 255, 255)
+            border-radius: 4px
+
+.works-grids
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item    
+        width: calc(100% / 4)
+        &:hover
+            .works-hover
+                opacity: 0.9
+.works-grid
+    position: relative
+    &__img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &__hover
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+
+.works-hover
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 20px
+    opacity: 0
+    background-color: rgb(14, 180, 147)
+    transition: all .4s
+    &__logo
+        margin-bottom: 29px
+    &__title
+        +rfs(18px)
+        font-weight: 700
+        line-height: 24px
+        color: rgb(255, 255, 255)
+        text-align: center
+        margin-bottom: 5px
+    &__text
+        +rfs(14px)
+        font-weight: 400
+        color: rgb(255, 255, 255)
+.team
+    padding: 101px 0 215px
+    &-body 
+        &__title
+            span 
+                margin-bottom: 36px
+        &__description
+            margin-bottom: 108px
+        &__people
+.team-people
+    display: flex
+    justify-content: space-between
+    position: relative
+    &__item
+        width: 22%
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -80px
+        left: 50%
+        transform: translateY(-50%)
+        .dot
+            display: inline-block
+            width: 8px
+            height: 8px
+            border: 1px solid rgba(6, 32, 51, 0.2)
+            border-radius: 50%
+            margin-right: 15px
+            &.last-child
+                margin-right: 0
+            &:hover
+                cursor: pointer
+            &.is-selected
+                background-color: rgb(6, 32, 51)
+.team-item
+    position: relative
+    text-align: center
+    &__block
+        position: relative
+        display: block 
+        margin-bottom: 21px
+        &:hover
+            .team-item__hover
+                opacity: 0.95
+    &__img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &__hover
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        box-sizing: border-box
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0 
+        top: 0
+        padding: 15px
+        opacity: 0
+        background-color: rgb(14, 180, 147)
+        transition: all .4s
+    &__name
+        +rfs(18px)
+        font-weight: 600
+        line-height: 1.33
+        text-align: center
+        color: rgb(14, 180, 147)
+    &__position
+        color: rgba(6, 32, 51, 0.56 )
+        +rfs(13px)
+        text-align: center
+        line-height: 1.85
+.team-hover
+    &__title
+        +rfs(16px)
+        font-weight: bold
+        line-height: 1.5
+        color: rgb(255, 255, 255)
+        margin-bottom: 10px
+    &__info
+        +rfs(16px)
+        line-height: 1.5
+        color: rgb(255, 255, 255)
+        margin-bottom: 45px
+    &__socials
+        display: flex
+        width: 100%
+        justify-content: center
+.team-socials
+    &__link
+        margin-right: 5px
+        width: 42px
+        height: 42px
+        &:last-child
+           margin-right: 0 
+        a 
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100%
+            background-color: rgba(0,0,0,0.3)
+            img 
+                display: inline-block
+
+.facts
+    padding: 100px 0 158px
+    background: url('../../img/bg-main.png') 0 0 no-repeat
+    background-size: cover
+    &-body 
+        &__title
+            span
+                margin-bottom: 31px
+                &:after,
+                &:before
+                    position: absolute
+                    display: inline-block
+                    content: ''
+                    width: 90px
+                    height: 1px
+                    background-color: rgba(255,255,255, 0.5)
+                    top: 50%
+                    transform: translateY(-50%)
+                &:after
+                    left: 130%
+                &:before
+                    right: 130%
+                &__items
+.fact-item
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+
+    &__fun
+        width: 20%
+        text-align: center
+.fact-fun
+    &__img
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 130px
+        height: 130px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        margin-bottom: 51px
+        img 
+    &__number
+        +rfs(60px)
+        font-weight: 600
+        text-align: center
+        color: rgb(255, 255, 255)
+        margin-bottom: 18px
+    &__text
+        +rfs(18px)
+        font-weight: 400
+        text-align: center
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+
+.discuss
+    padding: 100px 0 107px
+    &-body 
+        &__title
+            span
+                margin-bottom: 36px
+        &__text
+        &__content
+            margin-top: 73px
+
+.discuss-content
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    &__address
+    &__form
+    &__socials
+
+.discuss-address
+    +rfs(13px)
+    line-height: 1.45
+    color: rgb(106, 115, 123)
+    font-style: normal
+    width: 200px
+    margin-right: 20px
+    &__title
+        _rfs(22px)
+        text-align: left
+        color: rgb(6, 32, 51)
+        margin-bottom: 10px
+    a 
+        text-decoration: none
+        color: rgb(106, 115, 123)
+        display: block
+
+
+.discuss-form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__title
+        +rfs(24px)
+        font-weight: bold
+        text-align: left
+        color: rgb(6, 32, 51)
+    &__input
+        border: none
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+        +rfs(13px)
+        color: rgba(91, 100, 110, 0.5)
+        margin-bottom: 15px
+    &__button       
+        margin-left: auto
+        border: none
+        background: none
+        +rfs(16px)
+        color: rgb(0, 0, 0)
+        display: flex
+        align-items: center
+        cursor: pointer
+        img 
+            display: inline-block
+            margin-right: 5px
+.discuss-socials
+    margin-left: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    &__link
+        margin-bottom: 5px
+        &:last-child
+            margin-bottom: 0
+        a 
+            display: block
+            img 
+
+
+
